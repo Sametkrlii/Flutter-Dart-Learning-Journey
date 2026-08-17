@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:flutter_learn1/demos/stack_demo_view.dart';
-
-
 import '101/color_learn.dart';
 
 void main() {
