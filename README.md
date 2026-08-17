@@ -1,4 +1,4 @@
-# Flutter Öğrenme Sürecim
+# Flutter/Dart Öğrenme Sürecim
 
 Bu repository, Flutter ve Dart öğrenme sürecimde yaptığım konu bazlı çalışmalar, küçük denemeler ve demo uygulamalardan oluşmaktadır.
 
