@@ -1,4 +1,4 @@
-//Projede kullanılabilecek stringlerin bulunduğu dosya.
+// Projede kullanılan metinleri merkezi olarak tutar.
 
 
 class LanguageItems {

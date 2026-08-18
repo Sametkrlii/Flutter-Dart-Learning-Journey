@@ -1,4 +1,4 @@
-//CORE KLASÖRÜ -> UYGULAMA GENELİNDE TEKRAR EDEBİLCEK ÖZELLİKLER, ORTAK ŞEYLER.
+// Core klasörü, uygulama genelinde yeniden kullanılabilen ortak bileşenleri içerir.
 
 
 import 'package:flutter/material.dart';

@@ -1,4 +1,4 @@
-//PRODUCT KLASÖRÜ -> BU UYGULAMAYA ÖZGÜ İŞ MANTIĞI VE ÖZELLİKLER.
+// Product klasörü, uygulamaya özgü iş mantığını ve bileşenleri içerir.
 
 import "package:flutter/material.dart";
 import "package:flutter_learning_journey/product/languages/language_items.dart";

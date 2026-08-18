@@ -9,16 +9,17 @@ class AppBarLearnView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar:AppBar(
-        title: Text(_title),//final String tanımlayarak atamak daha mantıklı daha düzenli
+        // Başlığı bir değişkende tutmak kodu daha düzenli hâle getirir.
+        title: Text(_title),
         leading:Icon(Icons.arrow_back_ios_new,),
         shadowColor: Colors.grey,
         systemOverlayStyle: SystemUiOverlayStyle.light,
-        //centerTitle:true, main.dart otomatik olarak true atandı zaten.
-        //backgroundColor: Colors.transparent, main.darttan ayarlandı.
-        //elevation: 10, main.dart default 10 atandı zaten.
+        // centerTitle, main.dart içinde true olarak ayarlandı.
+        // backgroundColor, main.dart içinde transparent olarak ayarlandı.
+        // elevation, main.dart içinde 5 olarak ayarlandı.
         
-        //leadingWidth:56,//default 56  appbar solunda iconu sağa çeker.
-       // automaticallyImplyLeading: false,
+        // leadingWidth, AppBar'ın solundaki ikon alanının genişliğini belirler.
+        // automaticallyImplyLeading: false,
 
           
         actions: [

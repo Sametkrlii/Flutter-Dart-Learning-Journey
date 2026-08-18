@@ -7,7 +7,8 @@ class StackLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(),
-      body:Stack(//LIFO , SON GİREN İLK GÖZÜKÜR,ÜSTTE KALIR.
+      // Stack'te son eklenen widget en üstte görünür.
+      body:Stack(
         children: [
           Container(
             color:Colors.red,

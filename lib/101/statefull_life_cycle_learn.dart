@@ -17,20 +17,7 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
     );
   }
 }
-
-
-
-
-
-
-//widget.message neden Text içine string olarak verilmiyor önce onu öğren.!!!!
-
-
-
-
-
-
-
+// TODO: widget.message değerini Text içinde doğrudan göstermeyi incele.
 class _CustomFloatingActionButtonForEven extends StatelessWidget {
   const _CustomFloatingActionButtonForEven();
   @override

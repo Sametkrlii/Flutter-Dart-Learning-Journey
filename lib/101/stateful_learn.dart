@@ -31,10 +31,9 @@ class _StatefullLearnState extends State<StatefullLearn> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
 
-          // Row/Column'un ana eksendeki boyutunu belirler.
-          // min: Sadece child'ların kapladığı alan kadar yer kaplar.
-          // max: Mümkün olan tüm alanı kaplar.
-          // Default değeri: MainAxisSize.max
+          // Row veya Column'ın ana eksendeki boyutunu belirler.
+          // min: Yalnızca alt widget'ların kapladığı alanı kullanır.
+          // max: Kullanılabilir alanın tamamını kaplar (varsayılan).
           children: [_incrementButton(), _deincrementButton()],
         ),
       ),
