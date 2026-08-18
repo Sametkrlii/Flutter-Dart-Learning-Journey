@@ -10,7 +10,7 @@ class ColorLearnView extends StatelessWidget {
 
       body:Column (
         children: [
-          Container(
+          Container(height: 100, width: 100,
             color:Theme.of(context).colorScheme.error
           )
         

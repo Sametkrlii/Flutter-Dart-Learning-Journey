@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learn1/demos/stack_demo_view.dart';
+import 'package:flutter_learning_journey/101/statefull_life_cycle_learn.dart';
 import '101/color_learn.dart';
 
 void main() {
@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           elevation: 5,
         ),
       ),
-      home:  StackDemo(),
+      home:  StatefullLifeCycleLearn(message: "Samet",), 
     );
   }
 }

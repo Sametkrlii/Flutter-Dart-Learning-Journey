@@ -1,4 +1,4 @@
-package com.example.flutter_learn1
+package com.example.flutter_learning_journey
 
 import io.flutter.embedding.android.FlutterActivity
 

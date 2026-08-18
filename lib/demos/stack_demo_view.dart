@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learn1/core/random_image.dart';
+import 'package:flutter_learning_journey/core/random_image.dart';
 
 class StackDemo extends StatelessWidget {
   const StackDemo({super.key});
