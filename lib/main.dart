@@ -38,7 +38,7 @@ class MyApp extends StatelessWidget {
           elevation: 5,
         ),
       ),
-      home:  StatefullLifeCycleLearn(message: "Samet",), 
+      home:  StatefullLifeCycleLearn(message: "SametKarlı",), 
     );
   }
 }

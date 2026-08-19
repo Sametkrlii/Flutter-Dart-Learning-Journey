@@ -8,36 +8,90 @@ class StatefullLifeCycleLearn extends StatefulWidget {
 }
 
 class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
+  String _message = '';
+  late bool _isOdd = false;
+
+
+//TODO:lifecyclelar öğrenilecek.
+
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print("c");
+  }
+
+ @override
+void didUpdateWidget(covariant StatefullLifeCycleLearn oldWidget) {
+  // Parent widget rebuild olup bu State'e yeni bir StatefullLifeCycleLearn
+  // gönderdiğinde çalışır. oldWidget eski değerleri, widget ise yeni değerleri tutar.
+  // Eğer message değişmişse state içindeki verileri yeni değere göre güncelliyoruz.
+  super.didUpdateWidget(oldWidget);
+
+  if (oldWidget.message != widget.message) {
+    _message = widget.message;
+    _computeName();
+
+    setState(() {});
+  }
+}
+
+  @override
+  void initState() {
+    //Önce init state çalışır ardından didChangeDependencies çalışır.
+    super.initState();
+    _message = widget.message;
+    _isOdd = widget.message.length.isOdd;
+
+    _computeName();
+    print("a");
+  }
+
+  void _computeName() {
+    if (_isOdd) {
+      _message += " Kelimesi Tektir";
+    } else {
+      _message += " Kelimesi Çifttir";
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: widget.message.length.isOdd ? Text("Kelime tektir") : Text("Kelime Çift")),
+      appBar: AppBar(title: Text(_message)),
 
-      body: widget.message.length.isOdd ? _CustomTextButtonForOdd() : _CustomFloatingActionButtonForEven(),
+      body: _isOdd ? _CustomTextButtonForOdd(message: _message) : _CustomFloatingActionButtonForEven(message: _message),
     );
   }
 }
-// TODO: widget.message değerini Text içinde doğrudan göstermeyi incele.
+
 class _CustomFloatingActionButtonForEven extends StatelessWidget {
-  const _CustomFloatingActionButtonForEven();
+  const _CustomFloatingActionButtonForEven({required this.message});
+
+  final String message;
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
       onPressed: () {},
-      child: Text("BUTON", textAlign: TextAlign.center),
+      child: Text(message, textAlign: TextAlign.center),
     );
   }
 }
 
 class _CustomTextButtonForOdd extends StatelessWidget {
-  const _CustomTextButtonForOdd();
-  
+  const _CustomTextButtonForOdd({required this.message});
+  final String message;
+
   @override
   Widget build(BuildContext context) {
     return TextButton(
       style: ButtonStyle(backgroundColor: WidgetStateProperty.all(Colors.blue)),
       onPressed: () {},
-      child: Text("BUTON", textAlign: TextAlign.center),
+      child: Text(
+        message,
+        style: TextStyle(color: Colors.black),
+        textAlign: TextAlign.center,
+      ),
     );
   }
 }
