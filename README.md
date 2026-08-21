@@ -24,13 +24,13 @@ Bu repository, Flutter ve Dart öğrenme sürecimde yaptığım konu bazlı çal
 - ListTile
 - Indicator yapıları
 - Basit ortak/reusable widget yapıları
+- StatefulWidget ve state yönetiminin temelleri
+- Widget lifecycle
 
 ## İlerleyen Aşamalarda
 
 Eğitim serisi ilerledikçe Flutter'ın daha kapsamlı konuları üzerinde çalışmayı hedefliyorum. Bunlar arasında:
 
-- StatefulWidget ve state yönetiminin temelleri
-- Widget lifecycle
 - Navigation ve sayfalar arası geçişler
 - ListView ve dinamik liste yapıları
 - Formlar ve kullanıcı girdileri
