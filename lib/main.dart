@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learning_journey/101/statefull_life_cycle_learn.dart';
+import 'package:flutter_learning_journey/101/text_field_learn.dart';
 import '101/color_learn.dart';
 
 void main() {
@@ -15,9 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      
       theme: ThemeData.dark().copyWith(
         progressIndicatorTheme: ProgressIndicatorThemeData(strokeWidth: 2.5,color:Color.fromARGB(255, 17, 247, 255)),
-
+        
         colorScheme: ThemeData.dark().colorScheme.copyWith(
           
           error: ColorItems.error,
@@ -27,8 +28,9 @@ class MyApp extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
         ),
-       
 
+        textSelectionTheme:TextSelectionThemeData(cursorColor: Colors.blue,selectionColor: Colors.indigo,),
+        textTheme:const TextTheme(bodyLarge: TextStyle(color:Colors.red) ) ,
 
         appBarTheme: const AppBarTheme(
           
@@ -38,7 +40,7 @@ class MyApp extends StatelessWidget {
           elevation: 5,
         ),
       ),
-      home:  StatefullLifeCycleLearn(message: "SametKarlı",), 
+      home:  TextFieldLearn(), 
     );
   }
 }

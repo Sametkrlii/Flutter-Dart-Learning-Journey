@@ -11,30 +11,7 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
   String _message = '';
   late bool _isOdd = false;
 
-
-//TODO:lifecyclelar öğrenilecek.
-
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    print("c");
-  }
-
- @override
-void didUpdateWidget(covariant StatefullLifeCycleLearn oldWidget) {
-  // Parent widget rebuild olup bu State'e yeni bir StatefullLifeCycleLearn
-  // gönderdiğinde çalışır. oldWidget eski değerleri, widget ise yeni değerleri tutar.
-  // Eğer message değişmişse state içindeki verileri yeni değere göre güncelliyoruz.
-  super.didUpdateWidget(oldWidget);
-
-  if (oldWidget.message != widget.message) {
-    _message = widget.message;
-    _computeName();
-
-    setState(() {});
-  }
-}
+  //TODO:lifecyclelar öğrenilecek.
 
   @override
   void initState() {
@@ -44,7 +21,37 @@ void didUpdateWidget(covariant StatefullLifeCycleLearn oldWidget) {
     _isOdd = widget.message.length.isOdd;
 
     _computeName();
-    print("a");
+    print("1-initstate");
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    print("2-didchangedependencies");
+  }
+
+  @override
+  void didUpdateWidget(covariant StatefullLifeCycleLearn oldWidget) {
+    super.didUpdateWidget(oldWidget);
+
+    print("didUpdateWidget çalıştı");
+    print("Eski: ${oldWidget.message}");
+    print("Yeni: ${widget.message}");
+
+    if (oldWidget.message != widget.message) {
+      print("GERÇEKTEN DEĞİŞTİ");
+
+      _message = widget.message;
+      _isOdd = widget.message.length.isOdd;
+      _computeName();
+    }
+  }
+
+  @override
+  void dispose() {
+    super.dispose(); //sayfadan çıkıldığında çağrılır.
+    print("5-dispose , message boş string atandı.");
+    _message = "";
   }
 
   void _computeName() {
@@ -57,6 +64,7 @@ void didUpdateWidget(covariant StatefullLifeCycleLearn oldWidget) {
 
   @override
   Widget build(BuildContext context) {
+    print("3-build");
     return Scaffold(
       appBar: AppBar(title: Text(_message)),
 
