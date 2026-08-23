@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learning_journey/101/text_field_learn.dart';
+import 'package:flutter_learning_journey/demos/color_demos_view.dart';
 import '101/color_learn.dart';
 
 void main() {
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           elevation: 5,
         ),
       ),
-      home:  TextFieldLearn(), 
+      home:  ColorDemosView(), 
     );
   }
 }
