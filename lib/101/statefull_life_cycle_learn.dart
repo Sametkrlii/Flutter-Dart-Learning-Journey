@@ -11,7 +11,6 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
   String _message = '';
   late bool _isOdd = false;
 
-  //TODO:lifecyclelar öğrenilecek.
 
   @override
   void initState() {
