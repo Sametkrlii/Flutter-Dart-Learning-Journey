@@ -2,18 +2,34 @@
 // bu ekranda 3 buton ve bunlara basınca renk değişimi olacak.
 // Seçili olan buton selected icon olsun.
 
+
 import 'package:flutter/material.dart';
 
 class ColorDemosView extends StatefulWidget {
-  const ColorDemosView({super.key});
-
+  const ColorDemosView({super.key, required this.initialColor});
+  final Color? initialColor;
   @override
   State<ColorDemosView> createState() => _ColorDemosViewState();
 }
 
 class _ColorDemosViewState extends State<ColorDemosView> {
-  Color setBGColor = Colors.white;
+  Color? setBGColor;
   final String _error = "Error Occured";
+
+  @override
+  void initState() {
+    super.initState();
+    setBGColor = widget.initialColor ?? Colors.transparent;
+  }
+
+  @override
+  void didUpdateWidget(covariant ColorDemosView oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.initialColor != setBGColor && widget.initialColor != null) {
+      _changeBackGroundColor(widget.initialColor!);
+    }
+  }
+
   void _changeBackGroundColor(Color color) {
     setState(() {
       setBGColor = color;
@@ -24,7 +40,7 @@ class _ColorDemosViewState extends State<ColorDemosView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: setBGColor,
-      appBar: AppBar(),
+      //appBar:AppBar(),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
 
@@ -61,15 +77,16 @@ class _ColorDemosViewState extends State<ColorDemosView> {
 
   void _colorOnTap(int value) {
     if (value == _MyColors.main.index) {
-      _changeBackGroundColor(Colors.white);} 
-    else if (value == _MyColors.red.index) {
-       _changeBackGroundColor(Colors.red);} 
-    else if (value == _MyColors.blue.index) {
-      _changeBackGroundColor(Colors.blue);} 
-    else if (value == _MyColors.yellow.index) {
-      _changeBackGroundColor(Colors.yellow);} 
-    else {
-      print(_error);}
+      _changeBackGroundColor(Colors.white);
+    } else if (value == _MyColors.red.index) {
+      _changeBackGroundColor(Colors.red);
+    } else if (value == _MyColors.blue.index) {
+      _changeBackGroundColor(Colors.blue);
+    } else if (value == _MyColors.yellow.index) {
+      _changeBackGroundColor(Colors.yellow);
+    } else {
+      print(_error);
+    }
   }
 }
 
