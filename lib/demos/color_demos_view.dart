@@ -3,6 +3,8 @@
 // Seçili olan buton selected icon olsun.
 
 
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class ColorDemosView extends StatefulWidget {
