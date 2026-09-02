@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 
 class ListViewLearn extends StatefulWidget {
@@ -97,7 +99,6 @@ class _ListViewLearnState extends State<ListViewLearn> {
 }
 
 class _ListDemo extends StatefulWidget {
-  const _ListDemo({super.key});
 
   @override
   State<_ListDemo> createState() => __ListDemoState();

@@ -42,7 +42,7 @@ class _StatefullLearnState extends State<StatefullLearn> {
           Align(alignment: Alignment.topCenter, child: _baslikYazisi(context)),
           Align(alignment: Alignment.center, child: _counterDisplay(context)),
           Placeholder(),
-          Align(alignment:Alignment.center,child: CounterHelloButton()),
+          Align(alignment:Alignment.bottomCenter,child: CounterHelloButton()),
           
           
         ],
