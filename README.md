@@ -4,12 +4,6 @@ Bu repository, Flutter ve Dart öğrenme sürecimde yaptığım konu bazlı çal
 
 Öğrenme sürecimi ağırlıklı olarak HardwareAndro YouTube kanalındaki **“Temelden Zirveye Flutter”** eğitim serisi üzerinden sürdürüyorum.
 
-## Uygulama Projeleri
-
-### [Smart Control Home UI](smart_control_home_app/)
-
-Öğrendiğim Flutter ve Dart yapılarını pekiştirmek için hazırladığım akıllı ev kontrol paneli arayüzü. Proje; gündüz/gece görünümü, cihaz kartları, favoriler ve oda bazlı filtreleme özelliklerini içerir. Eğitim amaçlı bir UI çalışmasıdır ve herhangi bir API, veritabanı veya IoT entegrasyonu bulunmaz.
-
 ## Şu Ana Kadar Çalıştığım Konular
 
 - Flutter proje yapısı
