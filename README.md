@@ -26,13 +26,13 @@ Bu repository, Flutter ve Dart öğrenme sürecimde yaptığım konu bazlı çal
 - Basit ortak/reusable widget yapıları
 - StatefulWidget ve state yönetiminin temelleri
 - Widget lifecycle
+- Navigation ve sayfalar arası geçişler
+- ListView ve dinamik liste yapıları
 
 ## İlerleyen Aşamalarda
 
 Eğitim serisi ilerledikçe Flutter'ın daha kapsamlı konuları üzerinde çalışmayı hedefliyorum. Bunlar arasında:
 
-- Navigation ve sayfalar arası geçişler
-- ListView ve dinamik liste yapıları
 - Formlar ve kullanıcı girdileri
 - Future, async ve await
 - JSON ve veri modelleme
