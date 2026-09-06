@@ -31,7 +31,7 @@ class _NavigateDetailViewState extends State<NavigateDetailView> {
           onPressed: () {
             Navigator.of(context).pop(!widget.isOkey);
           },
-          icon: Icon(color: widget.isOkey ? denyColor:checkColor, widget.isOkey ? Icons.cancel_outlined:Icons.check),
+          icon: Icon(color:  widget.isOkey ? denyColor:checkColor, widget.isOkey ? Icons.cancel_outlined:Icons.check),
           label: widget.isOkey ? Text("Red", style: TextStyle(color: denyColor)):Text("Onayla", style: TextStyle(color: checkColor)),
         ),
       ),
