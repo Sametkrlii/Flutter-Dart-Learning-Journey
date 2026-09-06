@@ -1,4 +1,4 @@
-//ayrı bir foldera taşındı.
+//ayrı bir repoya taşındı.
 import 'package:flutter/material.dart';
 
 
