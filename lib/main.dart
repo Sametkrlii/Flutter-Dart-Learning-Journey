@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_learning_journey/101/navigation_learn.dart';
+import 'package:flutter_learning_journey/202/tab_learn.dart';
 import '101/color_learn.dart';
 
 void main() {
@@ -17,6 +17,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       
       theme: ThemeData.dark().copyWith(
+        tabBarTheme: TabBarThemeData(
+          unselectedLabelColor: Colors.red,
+          labelColor: Colors.white,
+          dividerColor: Colors.black,
+          
+        ),
+
+
+
         progressIndicatorTheme: ProgressIndicatorThemeData(strokeWidth: 2.5,color:Color.fromARGB(255, 17, 247, 255)),
         
         colorScheme: ThemeData.dark().colorScheme.copyWith(
@@ -40,7 +49,7 @@ class MyApp extends StatelessWidget {
           elevation: 5,
         ),
       ),
-      home:  NavigationLearnView(),
+      home:  TabLearn(),
     );
   }
 }
