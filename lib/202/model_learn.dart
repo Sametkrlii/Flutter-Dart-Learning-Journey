@@ -39,7 +39,7 @@ class PostModel5 {
   late final String _title;
   late final String _body;
 
-  String get userId => userId;
+  int get userId => _userId;
 
   PostModel5({required int userId, required int id, required String title, required String body})
     : _userId = userId,
