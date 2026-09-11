@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_learning_journey/202/model_learn_view.dart';
 import 'package:flutter_learning_journey/202/tab_learn.dart';
 import '101/color_learn.dart';
 
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
           elevation: 5,
         ),
       ),
-      home:  TabLearn(),
+      home:  ModelLearnView(),
     );
   }
 }
